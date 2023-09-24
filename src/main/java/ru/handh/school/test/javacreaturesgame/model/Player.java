@@ -7,15 +7,14 @@ import ru.handh.school.test.javacreaturesgame.exceptions.model.HealthTryExceptio
 
 public class Player extends Creatures {
 
-    public Player(Integer attack, Integer damage, Integer defense, Integer health) {
-        super(attack, damage, defense, health);
-    }
-
     @Getter
     @Setter
     private int tryHealthUp = 4;
+    private final int maxHealth = getHealth();
 
-    private int maxHealth = getHealth();
+    public Player(Integer attack, Integer damage, Integer defense, Integer health) {
+        super(attack, damage, defense, health);
+    }
 
     public int healthUp() {
         if (tryHealthUp != 0) {

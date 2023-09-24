@@ -89,11 +89,11 @@ public class GameServiceImpl implements GameService {
     private void checkMonsters() {
         List<Monster> secondList = List.copyOf(monsters);
         for (int i = secondList.size(); i > 0; i--) {
-            if (secondList.get(i-1).getHealth() <= 0){
-                monsters.remove(i-1);
+            if (secondList.get(i - 1).getHealth() <= 0) {
+                monsters.remove(i - 1);
             }
         }
-        if(monsters.isEmpty()){
+        if (monsters.isEmpty()) {
             System.out.println("Ура победа, вы уничтожили всех монстров\n" +
                     "Спасибо что играли!");
             System.exit(0);
